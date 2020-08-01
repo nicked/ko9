@@ -7,6 +7,7 @@
 
 @import Foundation;
 @import ObjectiveC.runtime;
+@class TypeEncoding;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -18,9 +19,7 @@ typedef NS_ENUM(char, SetterType) {
 @interface ClassProperty : NSObject
 
 @property (nonatomic, readonly) NSString *name;
-
-/// This will be the raw type encoding for now
-@property (nonatomic, readonly) NSString *encodeType;
+@property (nonatomic, readonly) TypeEncoding *type;
 
 @property (nonatomic, readonly) BOOL isReadOnly;
 @property (nonatomic, readonly) BOOL isNonAtomic;

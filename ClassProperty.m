@@ -6,6 +6,7 @@
 //
 
 #import "ClassProperty.h"
+#import "TypeEncoding.h"
 
 @implementation ClassProperty
 
@@ -26,7 +27,7 @@
 
             switch (attribChar) {
                 case 'T':
-                    _encodeType = attribDetail;
+                    _type = [[TypeEncoding alloc] initWithEncoding:attribDetail];
                     break;
                 case 'R':
                     _isReadOnly = YES;
