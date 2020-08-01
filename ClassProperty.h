@@ -1,6 +1,14 @@
+//
+//  ClassProperty.h
+//
+//  Created by Nick Randall on 9/5/20.
+//  Copyright © 2020 Nick Randall. All rights reserved.
+//
+
 @import Foundation;
 @import ObjectiveC.runtime;
 
+NS_ASSUME_NONNULL_BEGIN
 
 typedef NS_ENUM(char, SetterType) {
     Assign, Strong, Weak, Copy
@@ -31,3 +39,5 @@ typedef NS_ENUM(char, SetterType) {
 - (instancetype)initWithProperty:(objc_property_t)property;
 
 @end
+
+NS_ASSUME_NONNULL_END
